@@ -1,0 +1,63 @@
+- AWS IAM Policies
+  - Join Medium. 
+- Permisions for AWS Lambda Functions
+  - Join Medium. 
+- Customising the Bash prompt
+  -  Bash prompt customisation 
+- Terminals and their relevance today
+  -  Terminal control notes 
+  - GitHub - weibeld/terminal-escape-sequences: Examples of using ANSI terminal escape sequences in Bash scripts 
+  - Control characters, escape sequences, control sequences
+  - http://www.inwap.com/pdp10/ansicode.txt 
+  - figures/terminal-control.graffle
+- Bash command-line editing
+  - Command Line Editing (Bash Reference Manual) 
+  - Readline, emacs line-editing commands, vi line-editing commands
+  - Vi mode in Bash | Arabesque 
+- Deploy stateful application on Kubernetes
+  - hostPath volume directly referenced from Pod definition in Minikube
+  - Pod referencing PersistentVolumeClaim and (application) and PersistentVolume referencing hostPath volume (infrastructure) on Minikube
+  - " " " awsElasticBlockStore volume on Amazon EKS
+- kubectl productivity part 2
+  - Help messages and `kubectl explain` output in terminal pager
+  - Completion for `kubectl explain` resource field selector (TODO)
+  - Faster completion for resource names (TODO)
+    - GitHub - mkokho/kubemrr: For blazingly fast kubernets ops (doesn't work properly)
+  - Tool (kubectl plugin) for listing all the Roles for a subject and all subjects for a Role (through RoleBindings)
+    - For both Roles/ClusterRoles and RoleBindings/ClusterRoleBindings
+    - A subject can be a user, group, or ServiceAccount
+  - Wrapper commands/aliases
+    - GitHub - kubermatic/fubectl: Reduces repetitive interactions with kubectl 
+    - GitHub - arunvelsriram/kube-fzf: Shell commands using kubectl and fzf for command-line fuzzy searching of Kubernetes Pods. 
+    - GitHub - bonnefoa/kubectl-fzf: A fast kubectl autocompletion with fzf 
+  - `kubectl get --raw` (TODO)
+  - Auto-generate resource manifests with `kubectl run` and `--dry-run`
+    - For example, `kubectl run test --image=nginx --dry-run -o yaml` outputs the manifest of the Deployment that would be created with the `kubectl run` command. You can save this output to a file and use it as a starting point for customising the resource definition.
+    - The `kubectl run` command can create Deployments, Jobs, and Pods (differentiated by the value of the `--restart` option), as well as Services (when the `--expose` option is present).
+    - See "Cloud-Native DevOps with Kubernetes", p. 118
+  - kubespy
+    - `kubectl get --watch` on steroids. Allows to watch changes to a resource, but in much more detail and more user-friendly than `kubectl get --watch`
+  - Create command for efficiently unsetting elements in kubeconfig file
+    - Use `kubectl config unset` for contexts, clusters, and users (unset all of them at one, if they all have the same name).
+  - Inspect HTTP API requests and responses with log level 9 (`-v 9`)
+  - Custom output format: jsonpath and go-template
+    - JSONPath
+      - [JSONPath - XPath for JSON](https://goessner.net/articles/JsonPath/)
+      - GitHub - json-path/JsonPath: Java JsonPath implementation 
+      - [Jayway JsonPath evaluator](http://jsonpath.herokuapp.com/)
+      - [JSONPath Support - Kubernetes](https://kubernetes.io/docs/reference/kubectl/jsonpath/)
+    - Go template
+      - [template - The Go Programming Language](https://golang.org/pkg/text/template/)
+  - Select resources
+    - --selector (select by label), --field-selector (select by field value)
+  - Log tailing: GitHub - wercker/stern: ⎈ Multi pod and container log tailing for Kubernetes  (TODO)
+  - kubectl alternatives to interact with Kubernetes
+    - GitHub - derailed/k9s: ???? Kubernetes CLI To Manage Your Clusters In Style! 
+    - GitHub - cloudnativelabs/kube-shell: Kubernetes shell: An integrated shell for working with the Kubernetes 
+    - GitHub - databricks/click: The "Command Line Interactive Controller for Kubernetes" 
+    - GitHub - c-bata/kube-prompt: An interactive kubernetes client featuring auto-complete. 
+    - GitHub - errordeveloper/kubeplay: kubeplay – a new way to interact with Kubernetes API from your terminal 
+    - GitHub - CanopyTax/ckube: A cli to simplify working with kubectl for some common workflows 
+    - GitHub - nii236/kk: A kubernetes/kubectl terminal client 
+    - GitHub - alitari/kubexp 
+    - GitHub - IBM/kui: A hybrid command-line/UI development experience for cloud-native development 
